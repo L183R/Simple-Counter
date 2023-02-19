@@ -14,6 +14,7 @@ let num3 = 0;
 let num4 = 0;
 let num5 = 0;
 let num6 = 0;
+let num7 = 0;
 
 setInterval(function() {
             num1++;
@@ -37,6 +38,10 @@ setInterval(function() {
                 num5 = 0
                 num6++;
             }
+            if (num6 > 9) {
+                num6 = 0
+                num7++;
+            }
             //render your react application
             ReactDOM.render( < Home numero1 = {
                     num1
@@ -55,6 +60,9 @@ setInterval(function() {
                 }
                 numero6 = {
                     num6
+                }
+                numero7 = {
+                    num7
                 }
                 />, document.querySelector("#app"));
             }, 1000);
